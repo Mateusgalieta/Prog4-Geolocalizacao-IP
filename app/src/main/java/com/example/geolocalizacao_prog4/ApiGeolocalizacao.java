@@ -22,7 +22,7 @@ public class ApiGeolocalizacao {
         String line;
 
         try {
-            while ((line = r.readLine()) != null) {
+            while ((line = r.readLine()) != null) { //recebe input da linha da entrada do usuuario
                 total.append(line).append('\n');
             }
         }catch(Exception ex) {
@@ -34,20 +34,20 @@ public class ApiGeolocalizacao {
 
     // Esse método é o que vai mandar a requisição da Request para a API de geocalização.
     // No caso, utilizei a API https://ip-api.com/docs/api:json que inclusive possui a documentação dos campos a ser utilizado nos endpoints
-    private static String request(String stringUrl){
-        URL url = null;
-        HttpURLConnection urlConnection = null;
+    private static String request(String stringUrl){ //rece string url
+        URL url = null; // Cria variavel do tipo URL e zera ela
+        HttpURLConnection urlConnection = null; // url connection também zerada
         try {
-            url = new URL(stringUrl);
-            urlConnection = (HttpURLConnection) url.openConnection();
-            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-            return readStream(in);
+            url = new URL(stringUrl); //url recebe o que veio de parametro no metodo
+            urlConnection = (HttpURLConnection) url.openConnection(); //inicia e abre conexão com o endpoint
+            InputStream in = new BufferedInputStream(urlConnection.getInputStream()); // recebe o retorno atraves do getInputStream
+            return readStream(in); //retorna o resultado
         }
         catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); //tratativa de excepetion por parte da requisição.
         }
         finally {
-            urlConnection.disconnect();
+            urlConnection.disconnect(); //fecha conexão.
         }
         return "";
     }
