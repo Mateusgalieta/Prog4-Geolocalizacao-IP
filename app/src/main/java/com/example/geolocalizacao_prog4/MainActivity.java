@@ -3,8 +3,6 @@ package com.example.geolocalizacao_prog4;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.StrictMode;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -12,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
+import androidx.appcompat.app.AppCompatActivity;
+
 
 import org.json.JSONException;
 
@@ -21,16 +21,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
-                .permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
         setContentView(R.layout.activity_main);
     }
 
     public void carregarLocalizacao(String ip) {
         try {
-            Localizacao localizacao = ClienteGeoIP.retornarLocalizacaoPorIp(ip);
+            Localizacao localizacao = ApiGeolocalizacao.retornarLocalizacaoPorIp(ip);
             TextView resultado = findViewById(R.id.text_resultado);
 
             StringBuilder builder = new StringBuilder();
