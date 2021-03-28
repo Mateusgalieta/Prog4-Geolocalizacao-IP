@@ -8,4 +8,4 @@ Aplicativo para busca de geolocalização de IP usando a API https://ip-api.com/
 
 Tomei como referencia, o vídeo https://www.youtube.com/watch?v=MytQfkDv5eM e algumas adaptações.
 
-Comentei o código, porém no MainActivity ainda estou com um problema que não estou conseguindo resolver.
+A API é bem completa e traz várias informações sobre o IP Público. Inclusive dados do nome o ISP e o nome do seu Provedor de internet.
