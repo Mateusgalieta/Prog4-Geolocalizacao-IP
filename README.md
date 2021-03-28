@@ -1,4 +1,4 @@
-# Trabalho de Programação V na 6° Período - Sistemas de Informação - UEMG - Universidade do Estado de Minas Gerais.
+# Trabalho da Discplina Programação4 - 6° Período - Sistemas de Informação - UEMG - Universidade do Estado de Minas Gerais.
 
 Aluno: Mateus Augusto Galieta Cruz
 
