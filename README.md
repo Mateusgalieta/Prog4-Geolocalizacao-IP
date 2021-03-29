@@ -28,3 +28,5 @@ Exemplo de JSON retornado em uma consulta:
   "org": "FaleMais Comunicações LTDA",
   "as": "AS263971 FaleMais Comunicações LTDA"
 }
+
+Código da API está documentado na Classe APIGeolocalizacao.java
